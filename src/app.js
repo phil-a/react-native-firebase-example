@@ -10,10 +10,10 @@ class App extends Component {
   componentWillMount() {
     firebase.initializeApp({
     apiKey: Config.FIREBASE_API_KEY,
-    authDomain: `${Config.FIREBASE_HOST_URL}.firebaseapp.com`,
-    databaseURL: `https://${Config.FIREBASE_HOST_URL}.firebaseio.com`,
-    storageBucket: `${Config.FIREBASE_HOST_URL}.appspot.com`,
-    messagingSenderId: `${Config.FIREBASE_MESSAGE_ID}`
+    authDomain: `${Config.FIREBASE_PROJECT_NAME}.firebaseapp.com`,
+    databaseURL: `https://${Config.FIREBASE_PROJECT_NAME}.firebaseio.com`,
+    storageBucket: `${Config.FIREBASE_PROJECT_NAME}.appspot.com`,
+    messagingSenderId: Config.FIREBASE_MESSAGE_ID
     });
 
     firebase.auth().onAuthStateChanged((user) => {
